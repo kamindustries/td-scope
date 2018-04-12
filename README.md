@@ -6,15 +6,15 @@ Built with TouchDesigner 099
 
 ### Usage
 
-Connect an audio buffer to the td-oscilloscope tox and start adjusting parameters. Depending on how complex the signal is, some fine tuning of the trigger, comparator, and slope sign will be required to get a good track.
+Connect an audio buffer to the td-scope tox and start adjusting parameters. Depending on how complex the signal is, some fine tuning of the trigger, comparator, and slope sign will be required to get a good track.
 
-Note there's a little visual feedback thrown on at the end to make it look cool.
+There's a little visual feedback thrown on at the end to make it look cool.
 
-Tip: try using `Proximity` with a very small width for particularly tricky signals.
+Tip: for particularly tricky signals, try using `Proximity` with a very small width.
 
 ### Parameters
 
-`Latch` turns on oscilloscope tracking to get a stable looking waveform. Turning it off can be useful for longer timebases.
+`Latch` enables tracking to get a stable looking waveform. Turning it off makes it behave like a Trail CHOP and can be useful for longer timebases.
 
 `Timebase` chooses the window size in stepped increments. The length in seconds is displayed in the disabled parameter above.
 
@@ -22,11 +22,11 @@ Tip: try using `Proximity` with a very small width for particularly tricky signa
 
 `Trigger Comparator` selects whether the oscilloscope should look for values greater than or less than the chosen trigger value. 
     
-* `Less` latches onto values that are less than `Trigger`.   
-* `Greater` latches onto values that are greater than `Trigger`.
-* `Proximity` latches onto values that are within a certain range from `Trigger`. The `Trigger Width` parameter sets how large the acceptable range is.
+* `Less` latches onto values that are less than the trigger.   
+* `Greater` latches onto values that are greater than the trigger.
+* `Proximity` latches onto values that are within a certain range from the trigger. The `Trigger Width` parameter sets how large the acceptable range is.
 
-`Slope Sign` looks for a trigger with either a positive or negative slope.
+`Slope Sign` pairs the trigger to either a positive or negative slope.
 
 `Resample High Freq` will resample the buffer when the timebase is small (less than the length of 1 frame).
 
