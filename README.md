@@ -1,5 +1,7 @@
 # td-scope
 
+![gif](https://i.imgur.com/kj31ylq.gif)
+
 td-scope is a flexible oscilloscope for TouchDesigner. It works in a similar way to a real oscilloscope: a trigger and slope direction tell the system what part of the signal to track. In this example, the sample's index that meets this trigger condition is passed to a vertex shader which shifts the whole graph to align it for rendering.
 
 Built with TouchDesigner 099
